@@ -1,0 +1,33 @@
+﻿@model buggybites.ReviewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post">
+    <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+        <title>Reviews</title>
+    </asp:Content>
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <h2>Reviews</h2>
+        @foreach (var item in Model.review)
+        {
+
+            <br />
+            <label>@item.quote</label>
+            <label>@item.source</label>
+            <br />
+        }
+
+        <br />
+
+        @foreach (var item in Model.review)
+        {
+            item.ClearReview();
+        }
+
+
+    </asp:Content>
+
+    <input type="submit" value="refresh" name="button" />
+</form>

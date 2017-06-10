@@ -1,0 +1,28 @@
+﻿@model string
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post">
+    <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+        <title>Hang1</title>
+    </asp:Content>
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <h2>Hang1</h2>
+       
+
+            <br />
+        <label>time to Execute</label>
+            <label>@Model</label>
+            
+            <br />
+       
+
+        <br />
+
+       
+    </asp:Content>
+
+    <input type="submit" value="delay" name="button" />
+</form>
